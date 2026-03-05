@@ -1,0 +1,66 @@
+{
+  "name": "eslint-config-jvd",
+  "version": "1.0.0",
+  "description": "Shared ESLint and Prettier config for Next.js and Node.js TypeScript projects",
+  "license": "ISC",
+  "author": "Justin van Dijk",
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./nextjs": "./dist/nextjs.js",
+    "./node": "./dist/node.js",
+    "./prettier": "./dist/prettier.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jusst-me/eslint-config-jvd.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jusst-me/eslint-config-jvd/issues"
+  },
+  "homepage": "https://github.com/jusst-me/eslint-config-jvd#readme",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "prettier",
+    "prettierconfig",
+    "typescript",
+    "nextjs",
+    "node",
+    "tailwind"
+  ],
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "eslint": ">=9",
+    "prettier": ">=3",
+    "typescript": ">=5"
+  },
+  "dependencies": {
+    "@eslint/js": "^9.39.0",
+    "@next/eslint-plugin-next": "^16.0.0",
+    "eslint-config-prettier": "^10.0.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^7.0.0",
+    "eslint-plugin-n": "^17.24.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "globals": "^17.0.0",
+    "prettier-plugin-tailwindcss": "^0.7.0",
+    "typescript-eslint": "^8.15.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.2"
+  }
+}
