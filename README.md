@@ -8,6 +8,12 @@ Shared ESLint and Prettier configuration for Next.js (frontend) and Node.js (bac
 npm install -D eslint-config-jvd eslint typescript prettier
 ```
 
+**Next.js projects only** – also install the React plugins:
+
+```bash
+npm install -D eslint-plugin-react eslint-plugin-react-hooks
+```
+
 For Next.js projects, `@next/eslint-plugin-next` is included as a dependency and will be installed automatically.
 
 ## Usage
