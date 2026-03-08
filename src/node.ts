@@ -24,6 +24,9 @@ const config: Linter.Config[] = [
       globals: {
         ...globals.node,
       },
+      parserOptions: {
+        project: "./tsconfig.json",
+      },
     },
     rules: {
       "no-throw-literal": "error",
