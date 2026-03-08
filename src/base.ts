@@ -22,6 +22,7 @@ const config: Linter.Config[] = [
       "prefer-arrow-callback": "off",
       "simple-import-sort/imports": "error",
       "simple-import-sort/exports": "error",
+      "no-console": ["error", { allow: ["info", "warn", "error"] }],
     },
   },
 ];
