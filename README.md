@@ -73,5 +73,24 @@ The Prettier config includes `prettier-plugin-tailwindcss` for automatic Tailwin
 - eslint-plugin-n (recommended-module): no-deprecated-api, no-extraneous-import, no-missing-import, no-process-exit, no-unsupported-features, etc.
 - Rules: no-throw-literal, prefer-promise-reject-errors, require-await
 - n/no-sync: warn (sync Node APIs)
+- n/no-missing-import: configured with TypeScript extensions (`.ts`, `.tsx`, etc.) for correct import resolution; path aliases from `tsconfig.json` are used automatically
+- n/no-unpublished-import: disabled for test files (`*.test.ts`, `*.spec.ts`, `test/`, `__tests__/`, etc.) so devDependencies like supertest are allowed
+
+### n/no-missing-import – TypeScript and path mapping
+
+The rule uses `tryExtensions` with `.ts`/`.tsx` and `ignoreTypeImport: true` so TypeScript imports are validated correctly. Path aliases from `tsconfig.json` are picked up automatically. If it still fails (e.g. monorepo, custom resolvers), you can disable the rule locally or configure `settings.n.tryExtensions` / `settings.n.tsconfigPath`.
+
+### n/no-sync – local overrides
+
+The `n/no-sync` rule warns about synchronous Node.js API calls (e.g. `fs.readFileSync`). In some cases sync is intentional (e.g. simple JSON file storage, test setup). To disable the rule for specific files, add an override in your `eslint.config.js`:
+
+```js
+{
+  files: ["src/storage/simple-store.ts"], // or your test setup file
+  rules: {
+    "n/no-sync": "off",
+  },
+},
+```
 
 **Prettier:** Shared formatting with Tailwind CSS class sorting
