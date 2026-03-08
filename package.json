@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-jvd",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Shared ESLint and Prettier config for Next.js and Node.js TypeScript projects",
   "license": "ISC",
   "author": "Justin van Dijk",
@@ -49,8 +49,12 @@
     "eslint-plugin-react-hooks": "^7.0.0"
   },
   "peerDependenciesMeta": {
-    "eslint-plugin-react": { "optional": true },
-    "eslint-plugin-react-hooks": { "optional": true }
+    "eslint-plugin-react": {
+      "optional": true
+    },
+    "eslint-plugin-react-hooks": {
+      "optional": true
+    }
   },
   "dependencies": {
     "@eslint/js": "^9.39.0",
